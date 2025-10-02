@@ -1,0 +1,243 @@
+/* Person Form Styles */
+.person-form-container {
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-md);
+  animation: simpleFadeIn 0.15s ease-out;
+}
+
+.form-header {
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+}
+
+.form-title {
+  color: var(--text-primary);
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  margin-bottom: 0;
+}
+
+.title-icon {
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.person-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: var(--spacing-xl);
+}
+
+.label-icon {
+  color: var(--primary);
+  font-size: var(--font-size-sm);
+}
+
+.form-help {
+  color: var(--text-muted);
+  font-size: var(--font-size-xs);
+  margin-top: var(--spacing-xs);
+}
+
+/* Radio Group Styles */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) 0;
+}
+
+.radio-option {
+  margin-bottom: 0;
+}
+
+.radio-option .form-check-input {
+  background-color: var(--surface-light);
+  border: 2px solid var(--border-light);
+  margin-top: 0.125rem;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.radio-option .form-check-input:checked {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.radio-option .form-check-input:focus {
+  box-shadow: 0 0 0 0.2rem rgba(88, 101, 242, 0.25);
+}
+
+.radio-option .form-check-label {
+  color: var(--text-secondary);
+  font-weight: 500;
+  cursor: pointer;
+  padding-left: var(--spacing-md);
+  font-size: var(--font-size-base);
+}
+
+.radio-option .form-check-input:checked + .form-check-label {
+  color: var(--text-primary);
+}
+
+/* Error Styles */
+.invalid-feedback {
+  color: var(--error);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  margin-top: var(--spacing-xs);
+}
+
+.form-control.is-invalid {
+  border-color: var(--error);
+  box-shadow: none;
+}
+
+.form-control.is-invalid:focus {
+  border-color: var(--error);
+  box-shadow: 0 0 0 0.2rem rgba(237, 66, 69, 0.25);
+}
+
+.form-errors-alert {
+  background-color: rgba(254, 231, 92, 0.1);
+  border: 1px solid rgba(254, 231, 92, 0.3);
+  color: var(--text-primary);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.error-list {
+  margin-bottom: 0;
+  padding-left: var(--spacing-lg);
+}
+
+.error-list li {
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: flex-end;
+  margin-top: var(--spacing-2xl);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--border-light);
+}
+
+.submit-button {
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  display: flex;
+  align-items: center;
+  min-width: 160px;
+  justify-content: center;
+  font-size: var(--font-size-lg);
+  min-height: 50px;
+}
+
+.cancel-button {
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-lg);
+  min-height: 50px;
+}
+
+/* Desktop Optimizations */
+@media (min-width: 992px) {
+  .person-form-container {
+    padding: var(--spacing-2xl);
+  }
+}
+
+/* Ensure date picker works properly */
+.person-form-container {
+  overflow: visible;
+}
+
+.form-group {
+  overflow: visible;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .person-form-container {
+    padding: var(--spacing-lg);
+    margin: var(--spacing-sm);
+  }
+
+  .form-title {
+    font-size: var(--font-size-xl);
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+    gap: var(--spacing-sm);
+  }
+
+  .submit-button,
+  .cancel-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .person-form-container {
+    padding: var(--spacing-md);
+    margin: 0;
+    border-radius: var(--radius-md);
+  }
+
+  .form-group {
+    margin-bottom: var(--spacing-md);
+  }
+}
+
+/* Animations */
+@keyframes formSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading spinner in submit button */
+.submit-button .spinner-border-sm {
+  width: 1rem;
+  height: 1rem;
+  border-width: 2px;
+}
+
+/* Custom date input styling */
+.form-control[type="date"] {
+  position: relative;
+  z-index: 1;
+}
+
+.form-control[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 0.7;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.form-control[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}

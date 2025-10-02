@@ -1,0 +1,260 @@
+/* Person Card Styles - Table Row Style */
+.person-card {
+  margin-bottom: var(--spacing-xs);
+  position: relative;
+  overflow: hidden;
+}
+
+.person-card.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.person-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  width: 100%;
+}
+
+.person-avatar {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.avatar-text {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: white;
+  position: absolute;
+  z-index: 1;
+}
+
+.avatar-emoji {
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  font-size: 0.9rem;
+  background-color: var(--surface);
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--surface);
+}
+
+.person-info {
+  min-width: 200px;
+  flex-shrink: 0;
+}
+
+.person-name {
+  color: var(--text-primary);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+  word-wrap: break-word;
+  line-height: 1.2;
+}
+
+/* Badge styles handled by components.css */
+
+.person-details {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  flex: 1;
+  min-width: 0;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  margin: 0;
+  padding: 0;
+}
+
+.detail-icon {
+  color: var(--text-muted);
+  font-size: var(--font-size-xs);
+  width: 12px;
+  flex-shrink: 0;
+}
+
+.detail-text {
+  color: var(--text-secondary);
+  font-size: var(--font-size-xs);
+  word-wrap: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.person-actions {
+  display: flex;
+  gap: var(--spacing-xs);
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.action-button {
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
+}
+
+.edit-button {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.edit-button:hover:not(:disabled) {
+  background-color: var(--primary);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.delete-button {
+  border-color: var(--error);
+  color: var(--error);
+}
+
+.delete-button:hover:not(:disabled) {
+  background-color: var(--error);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.action-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Loading Overlay */
+.card-loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(47, 49, 54, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.loading-spinner .spinner-border-sm {
+  color: var(--primary);
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .person-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+  
+  .person-info {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .person-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+    width: 100%;
+  }
+  
+  .detail-text {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+  }
+  
+  .person-actions {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: var(--spacing-sm);
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid var(--border-light);
+  }
+}
+
+@media (max-width: 576px) {
+  .person-avatar {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .avatar-text {
+    font-size: var(--font-size-xs);
+  }
+  
+  .avatar-emoji {
+    width: 16px;
+    height: 16px;
+    font-size: 0.8rem;
+  }
+  
+  .person-name {
+    font-size: var(--font-size-sm);
+  }
+  
+  .action-button {
+    flex: 1;
+    justify-content: center;
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+}
+
+/* Simplified card animation */
+.person-card {
+  animation: cardFadeIn 0.15s ease-out;
+}
+
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Badge variants */
+.badge.bg-primary {
+  background-color: var(--primary);
+}
+
+.badge.bg-success {
+  background-color: var(--success);
+}
+
+.badge.bg-secondary {
+  background-color: var(--text-muted);
+}
+
+.badge.bg-neutral {
+  background-color: var(--gender-neutral);
+  color: white;
+}

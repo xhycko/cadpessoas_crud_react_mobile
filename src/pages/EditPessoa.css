@@ -1,0 +1,200 @@
+/* Edit Pessoa Page Styles */
+.edit-pessoa-page {
+  min-height: calc(100vh - 160px);
+  padding: var(--spacing-lg) 0;
+}
+
+/* Page Header */
+.page-header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.header-content {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg) 0;
+}
+
+.back-button {
+  border-color: var(--border-light) !important;
+  color: var(--text-secondary) !important;
+  background-color: transparent !important;
+  border-radius: var(--radius-md) !important;
+  font-weight: 500 !important;
+  padding: var(--spacing-sm) var(--spacing-md) !important;
+  transition: all var(--transition-fast) !important;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none !important;
+}
+
+.back-button:hover {
+  background-color: var(--surface-light) !important;
+  border-color: var(--primary-light) !important;
+  color: var(--primary-light) !important;
+  transform: translateY(-1px);
+}
+
+.header-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.page-title {
+  color: var(--text-primary);
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.title-icon {
+  color: var(--warning);
+  font-size: 1.8rem;
+}
+
+.page-subtitle {
+  color: var(--text-secondary);
+  font-size: var(--font-size-base);
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+/* Form Section */
+.form-section {
+  margin-bottom: var(--spacing-2xl);
+}
+
+/* Error Container */
+.error-container {
+  padding: var(--spacing-xl) 0;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--spacing-md);
+  }
+  
+  .back-button {
+    align-self: flex-start;
+    width: auto;
+  }
+  
+  .page-title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .page-subtitle {
+    font-size: var(--font-size-sm);
+  }
+}
+
+@media (max-width: 576px) {
+  .edit-pessoa-page {
+    padding: var(--spacing-md) 0;
+  }
+  
+  .page-header {
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .header-content {
+    padding: var(--spacing-md) 0;
+  }
+  
+  .form-section {
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .error-container {
+    padding: var(--spacing-lg) 0;
+  }
+}
+
+/* Animation for page load */
+.edit-pessoa-page {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Focus states and accessibility */
+.back-button:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Loading state for the entire page */
+.edit-pessoa-page.loading {
+  pointer-events: none;
+}
+
+.edit-pessoa-page.loading .header-content {
+  opacity: 0.7;
+}
+
+/* Responsive form container */
+@media (min-width: 1200px) {
+  .form-section .col-xl-8 {
+    max-width: 900px;
+  }
+}
+
+/* Smooth transitions */
+.back-button,
+.page-title,
+.page-subtitle {
+  transition: all var(--transition-fast);
+}
+
+/* Hover effects for better UX */
+.header-info:hover .title-icon {
+  transform: scale(1.05);
+  transition: transform var(--transition-fast);
+}
+
+/* Custom spacing for better visual hierarchy */
+.page-header + .form-section {
+  position: relative;
+}
+
+/* Specific styling for edit mode */
+.edit-pessoa-page .person-form-container {
+  border-left: 4px solid var(--warning);
+}
+
+.edit-pessoa-page .form-title {
+  color: var(--text-primary);
+}
+
+.edit-pessoa-page .title-icon {
+  color: var(--warning);
+}
+
+/* Loading spinner customization for edit page */
+.edit-pessoa-page .loading-spinner-container {
+  min-height: 300px;
+}
+
+/* Error message styling in edit context */
+.error-container .custom-error-alert {
+  margin-top: var(--spacing-lg);
+}

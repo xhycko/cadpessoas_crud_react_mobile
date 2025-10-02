@@ -1,0 +1,86 @@
+/* Design System Variables */
+:root {
+  /* Primary Colors (inspirado no Discord/GitHub) */
+  --primary: #5865F2;
+  --primary-hover: #4752C4;
+  --primary-light: #7983F5;
+  --primary-dark: #3C45A5;
+  
+  /* Secondary Colors */
+  --secondary: #57F287;
+  --secondary-hover: #3BA55D;
+  --secondary-light: #71F5A0;
+  
+  /* Neutral Colors */
+  --background: #36393F;
+  --surface: #2F3136;
+  --surface-light: #40444B;
+  --surface-lighter: #4F545C;
+  --text-primary: #FFFFFF;
+  --text-secondary: #B9BBBE;
+  --text-muted: #72767D;
+  --border: #202225;
+  --border-light: #40444B;
+  
+  /* Status Colors */
+  --success: #57F287;
+  --warning: #FEE75C;
+  --error: #ED4245;
+  --info: #5865F2;
+  
+  /* Gender Colors */
+  --gender-neutral: #6B7280;
+  
+  /* Typography */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  
+  /* Transitions */
+  --transition-fast: 0.1s ease-in-out;
+  --transition-normal: 0.2s ease-in-out;
+  --transition-slow: 0.3s ease-in-out;
+  
+  /* Z-index */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+}
+
+/* Responsive Breakpoints */
+:root {
+  --mobile: 320px;
+  --mobile-lg: 480px;
+  --tablet: 768px;
+  --desktop: 1024px;
+  --desktop-lg: 1200px;
+}

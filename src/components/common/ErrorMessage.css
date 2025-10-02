@@ -1,0 +1,143 @@
+/* Error Message Styles */
+.custom-error-alert {
+  background-color: rgba(237, 66, 69, 0.1) !important;
+  border: 1px solid rgba(237, 66, 69, 0.3) !important;
+  border-radius: var(--radius-lg) !important;
+  color: var(--text-primary) !important;
+  margin-bottom: var(--spacing-lg);
+}
+
+.error-content {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+}
+
+.error-icon {
+  color: var(--error);
+  font-size: 1.25rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.error-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.error-message {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+  word-wrap: break-word;
+}
+
+.error-details {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+.error-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex-shrink: 0;
+}
+
+.retry-button {
+  background-color: transparent !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: var(--text-primary) !important;
+  font-size: var(--font-size-xs) !important;
+  padding: var(--spacing-xs) var(--spacing-sm) !important;
+  border-radius: var(--radius-md) !important;
+  transition: all var(--transition-fast) !important;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.retry-button:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  transform: translateY(-1px);
+}
+
+.dismiss-button {
+  color: var(--text-secondary) !important;
+  padding: var(--spacing-xs) !important;
+  border: none !important;
+  background: transparent !important;
+  font-size: 1.1rem !important;
+  transition: all var(--transition-fast) !important;
+}
+
+.dismiss-button:hover {
+  color: var(--text-primary) !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-radius: var(--radius-sm) !important;
+}
+
+/* Variant Styles */
+.custom-error-alert.alert-warning {
+  background-color: rgba(254, 231, 92, 0.1) !important;
+  border-color: rgba(254, 231, 92, 0.3) !important;
+}
+
+.custom-error-alert.alert-warning .error-icon {
+  color: var(--warning);
+}
+
+.custom-error-alert.alert-info {
+  background-color: rgba(88, 101, 242, 0.1) !important;
+  border-color: rgba(88, 101, 242, 0.3) !important;
+}
+
+.custom-error-alert.alert-info .error-icon {
+  color: var(--info);
+}
+
+.custom-error-alert.alert-success {
+  background-color: rgba(87, 242, 135, 0.1) !important;
+  border-color: rgba(87, 242, 135, 0.3) !important;
+}
+
+.custom-error-alert.alert-success .error-icon {
+  color: var(--success);
+}
+
+/* Mobile Optimizations */
+@media (max-width: 576px) {
+  .error-content {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  .error-actions {
+    align-self: stretch;
+    justify-content: space-between;
+  }
+  
+  .retry-button {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+/* Animation for error appearance */
+.custom-error-alert {
+  animation: errorSlideIn 0.3s ease-out;
+}
+
+@keyframes errorSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
