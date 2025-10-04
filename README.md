@@ -1,131 +1,115 @@
 # CRUD React Mobile
 
-Projeto educacional demonstrando as vantagens da arquitetura REST sobre aplicações monolíticas através de uma interface React mobile-first.
+Projeto educacional demonstrando arquitetura REST com interface React mobile-first.
 
-## 🎯 Objetivo
+## Objetivo
 
-Este projeto foi criado para demonstrar na prática como uma aplicação React pode consumir uma API REST de forma desacoplada, evidenciando os benefícios da separação entre frontend e backend.
+Demonstrar como aplicação React consome API REST de forma desacoplada.
 
-## 🚀 Tecnologias
+## Tecnologias
 
 - **React 18** - Framework JavaScript
-- **Vite** - Build tool e dev server
+- **Vite** - Build tool
 - **React Router DOM** - Roteamento
 - **Bootstrap 5** - Framework CSS
-- **React Bootstrap** - Componentes Bootstrap para React
-- **Axios** - Cliente HTTP para API
+- **React Bootstrap** - Componentes Bootstrap
+- **Axios** - Cliente HTTP
 - **React Icons** - Ícones
 
-## 📱 Características
+## Características
 
-- **Mobile-First**: Interface otimizada para dispositivos móveis
-- **Responsivo**: Adapta-se a diferentes tamanhos de tela
-- **Design Moderno**: Sistema de cores inspirado em sites populares
+- **Mobile-First**: Interface otimizada para móveis
+- **Responsivo**: Adapta-se a diferentes telas
+- **Design Moderno**: Sistema de cores inspirado Discord/GitHub
 - **Arquitetura REST**: Consome API REST existente
-- **Componentização**: Componentes reutilizáveis e modulares
+- **Componentização**: Componentes reutilizáveis
 
-## 🏗️ Estrutura do Projeto
+## Estrutura
 
 ```
 src/
 ├── components/
-│   ├── common/          # Componentes compartilhados
-│   ├── forms/           # Componentes de formulário
-│   └── layout/          # Componentes de layout
-├── pages/               # Páginas da aplicação
-├── services/            # Serviços de API
+│   ├── common/          # Compartilhados
+│   ├── forms/           # Formulários
+│   └── layout/          # Layout
+├── pages/               # Páginas
+├── services/            # API
 ├── hooks/               # Custom hooks
 ├── utils/               # Utilitários
-├── models/              # Modelos de dados
-└── styles/              # Estilos globais
+├── models/              # Modelos
+└── styles/              # Estilos
 ```
 
-## 🔧 Configuração
+## Configuração
 
 ### Pré-requisitos
-
 - Node.js 18+
-- npm ou yarn
-- API REST rodando em `http://localhost:8080`
+- npm
+- API REST em `http://localhost:8080`
 
 ### Instalação
+```bash
+npm install
+```
 
-1. Clone o repositório
-2. Instale as dependências:
+### Configurar API
+```
+VITE_API_BASE_URL=http://localhost:8080/api
+```
 
-   ```bash
-   npm install
-   ```
-
-3. Configure a URL da API no arquivo `.env`:
-   ```
-   VITE_API_BASE_URL=http://localhost:8080/api
-   ```
-
-### Executar em Desenvolvimento
-
+### Executar
 ```bash
 npm run dev
 ```
+Acesso: `http://localhost:5173`
 
-A aplicação estará disponível em `http://localhost:5173`
-
-### Build para Produção
-
+### Build
 ```bash
 npm run build
 ```
 
-## Funcionalidades Implementadas
+## Funcionalidades
 
-### Concluído
-
-- [x] Estrutura base do projeto React com Vite
-- [x] Sistema de roteamento com React Router
-- [x] Layout responsivo com header e footer (100% da resolução)
-- [x] Sistema de cores e design moderno
+- [x] Estrutura React com Vite
+- [x] Roteamento React Router
+- [x] Layout responsivo (100% resolução)
+- [x] Sistema de cores moderno
 - [x] Componentes compartilhados (Loading, Error, Toast, Dialog)
-- [x] Serviço de API com tratamento de erros
-- [x] Modelos de dados e validação (incluindo telefone)
-- [x] Página inicial com apresentação do projeto
-- [x] Componentes de pessoa (PersonCard e PersonForm)
-- [x] Páginas CRUD completas (Listar, Adicionar, Editar)
-- [x] Página de monitoramento da API com auto-refresh
-- [x] Integração completa com a API REST
-- [x] Cards em formato de lista vertical compacta
-- [x] Formulários com campos maiores e mais confortáveis
-- [x] CSS refatorado sem duplicações e `!important` excessivo
+- [x] Serviço API com tratamento de erros
+- [x] Modelos de dados e validação
+- [x] Página inicial
+- [x] Componentes pessoa (PersonCard, PersonForm)
+- [x] Páginas CRUD completas
+- [x] Monitoramento API com auto-refresh
+- [x] Integração completa API REST
+- [x] Cards em lista vertical compacta
+- [x] Formulários com campos maiores
+- [x] CSS refatorado sem duplicações
 
 ## Design System
 
-O projeto utiliza um sistema de design moderno com:
+- **Cores**: Paleta Discord/GitHub
+- **Tipografia**: Fonte Inter
+- **Componentes**: Bootstrap customizado tema escuro
+- **Animações**: Transições suaves
+- **Layout**: 100% resolução, lista vertical
+- **Formulários**: Campos grandes e confortáveis
 
-- **Cores**: Paleta inspirada no Discord/GitHub
-- **Tipografia**: Fonte Inter para melhor legibilidade
-- **Componentes**: Bootstrap customizado com tema escuro
-- **Animações**: Transições suaves e micro-interações
-- **Layout**: 100% da resolução, lista vertical compacta
-- **Formulários**: Campos grandes e confortáveis para digitação
-
-## 🔗 API REST
-
-A aplicação consome uma API REST com os seguintes endpoints:
+## API REST
 
 - `GET /api/pessoas` - Listar pessoas
-- `GET /api/pessoas/{id}` - Buscar pessoa por ID
+- `GET /api/pessoas/{id}` - Buscar por ID
 - `POST /api/pessoas` - Criar pessoa
 - `PUT /api/pessoas/{id}` - Atualizar pessoa
 - `DELETE /api/pessoas/{id}` - Remover pessoa
 - `GET /api/health` - Status da API
 
-## Vantagens da Arquitetura REST
-
-Este projeto demonstra:
+## Vantagens Arquitetura REST
 
 1. **Desacoplamento**: Frontend e backend independentes
-2. **Reutilização**: API pode servir múltiplos clientes
+2. **Reutilização**: API serve múltiplos clientes
 3. **Escalabilidade**: Escale cada camada separadamente
 4. **Flexibilidade**: Use diferentes tecnologias
 5. **Testabilidade**: Teste cada camada isoladamente
-6. **Manutenibilidade**: Código mais organizado e modular
+6. **Manutenibilidade**: Código organizado e modular
 
