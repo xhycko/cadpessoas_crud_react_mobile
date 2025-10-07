@@ -1,12 +1,12 @@
 # Plano de Implementação
 
-- [x] 1. Configurar estrutura do projeto
+- [x] 1. Configurar estrutura projeto
   - Criar projeto React com Vite
   - Instalar dependências (React Router, Axios, Bootstrap)
-  - Configurar estrutura de pastas
+  - Configurar estrutura pastas
   - _Requisitos: 1.1, 1.2_
 
-- [x] 2. Implementar camada de API e modelos
+- [x] 2. Implementar camada API e modelos
   - [x] 2.1 Criar PessoaService com operações CRUD
     - Configurar instância axios
     - Implementar métodos CRUD e health check
@@ -37,7 +37,7 @@
     - Sistema de notificações Toast
     - _Requisitos: 2.5_
 
-- [x] 4. Desenvolver componentes de gerenciamento de pessoas
+- [x] 4. Desenvolver componentes gerenciamento pessoas
   - [x] 4.1 Criar PersonCard para exibição em lista
     - Layout responsivo de cartão
     - Avatar baseado no gênero
@@ -104,7 +104,7 @@
     - Testar fluxos CRUD completos
     - Testar cenários de erro
 
-- [x] 8. Integração final e documentação
+- [x] 8. Integração final documentação
   - [x] 8.1 Conectar todos os componentes
     - Verificar operações CRUD end-to-end
     - Testar navegação entre páginas
@@ -118,7 +118,7 @@
     - Configurar settings de produção
     - Otimizar tamanho do bundle
 
-- [x] 9. Melhorias de layout e UX
+- [x] 9. Melhorias layout UX
   - [x] 9.1 Refatorar CSS
     - Remover uso excessivo de !important
     - Criar classes unificadas de componentes

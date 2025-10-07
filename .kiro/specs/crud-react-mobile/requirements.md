@@ -2,7 +2,7 @@
 
 ## Introdução
 
-App React mobile-first para CRUD de pessoas via API REST. Interface moderna e responsiva.
+App React mobile-first para CRUD pessoas via API REST. Bootstrap 5.
 
 ## Requisitos
 
@@ -12,21 +12,21 @@ App React mobile-first para CRUD de pessoas via API REST. Interface moderna e re
 
 #### Critérios de Aceitação
 
-1. WHEN acessa mobile THEN sistema SHALL exibir interface responsiva
-2. WHEN carrega THEN sistema SHALL consumir API REST
-3. WHEN interage THEN sistema SHALL responder sem reload
+1. QUANDO acessa mobile ENTÃO sistema DEVE exibir interface responsiva
+2. QUANDO carrega ENTÃO sistema DEVE consumir API REST
+3. QUANDO interage ENTÃO sistema DEVE responder sem reload
 
 ### Requisito 2
 
-**História:** Como usuário, quero operações CRUD completas, para gerenciar dados de pessoas.
+**História:** Como usuário, quero operações CRUD completas, para gerenciar dados pessoas.
 
 #### Critérios de Aceitação
 
-1. WHEN lista THEN sistema SHALL fazer GET e exibir dados
-2. WHEN cria THEN sistema SHALL fazer POST
-3. WHEN edita THEN sistema SHALL fazer PUT
-4. WHEN exclui THEN sistema SHALL fazer DELETE
-5. IF falha THEN sistema SHALL exibir erro
+1. QUANDO lista ENTÃO sistema DEVE fazer GET e exibir dados
+2. QUANDO cria ENTÃO sistema DEVE fazer POST
+3. QUANDO edita ENTÃO sistema DEVE fazer PUT
+4. QUANDO exclui ENTÃO sistema DEVE fazer DELETE
+5. SE falha ENTÃO sistema DEVE exibir erro
 
 ### Requisito 3
 
@@ -34,9 +34,9 @@ App React mobile-first para CRUD de pessoas via API REST. Interface moderna e re
 
 #### Critérios de Aceitação
 
-1. WHEN acessa formulário THEN sistema SHALL exibir: nome, email, telefone, gênero, data nascimento
-2. WHEN preenche nome THEN sistema SHALL validar 2-100 caracteres
-3. WHEN preenche email THEN sistema SHALL validar formato
-4. WHEN preenche telefone THEN sistema SHALL aplicar máscara (XX) XXXXX-XXXX
-5. WHEN seleciona gênero THEN sistema SHALL oferecer: Masculino, Feminino, Não Informado
-6. IF campo vazio THEN sistema SHALL exibir erro
+1. QUANDO acessa formulário ENTÃO sistema DEVE exibir: nome, email, telefone, gênero, data nascimento
+2. QUANDO preenche nome ENTÃO sistema DEVE validar 2-100 caracteres
+3. QUANDO preenche email ENTÃO sistema DEVE validar formato
+4. QUANDO preenche telefone ENTÃO sistema DEVE aplicar máscara (XX) XXXXX-XXXX
+5. QUANDO seleciona gênero ENTÃO sistema DEVE oferecer: Masculino, Feminino, Não Informado
+6. SE campo vazio ENTÃO sistema DEVE exibir erro

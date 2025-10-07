@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-SPA React mobile-first para CRUD de pessoas via API REST. Interface moderna e responsiva.
+SPA React mobile-first para CRUD pessoas via API REST. Bootstrap 5.
 
 ## Arquitetura
 
@@ -18,13 +18,12 @@ graph TB
     end
 ```
 
-### Stack Tecnológico
+### Stack
 
-- **Frontend**: React 18 + Vite
-- **Estilo**: Bootstrap 5 + CSS customizado
-- **HTTP**: Axios
-- **Roteamento**: React Router
-- **Estado**: React Hooks
+- React 18 + Vite
+- Bootstrap 5 + CSS customizado
+- Axios
+- React Router
 
 ## Componentes
 
@@ -75,20 +74,13 @@ interface Pessoa {
 
 ## Tratamento de Erros
 
-### Estratégia
-- Erros de rede: "Erro de conexão"
-- Erros de validação: Mensagens específicas por campo
-- Erros da API: Exibir mensagem retornada
-- Toast notifications para feedback
+- Rede: "Erro de conexão"
+- Validação: Mensagens por campo
+- API: Exibir mensagem retornada
+- Toast notifications
 
-## Estratégia de Testes
+## Testes
 
-### Ferramentas
-- **Jest**: Framework de testes
-- **React Testing Library**: Testes de componentes
-- **MSW**: Mock da API
-
-### Cobertura
-- Componentes: Renderização e interações
-- Services: Chamadas à API
-- Hooks: Lógica de estado
+- Jest: Framework testes
+- React Testing Library: Componentes
+- MSW: Mock API
